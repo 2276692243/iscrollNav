@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.clearfix {
+				zoom: 1;
+			}
+			
+			.clearfix:after {
+				content: "";
+				display: block;
+				height: 0;
+				line-height: 0;
+				overflow: hidden;
+			}
+			
+			html,
+			body {
+				backface-visibility: #fff;
+				/*height: 100%;*/
+			}
+			
+			#wrapper {
+				position: fixed;
+				z-index: 2;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 45px;
+				line-height: 45px;
+				border-bottom: 1px solid #CCCCCC;
+				overflow: hidden;
+			}
+			
+			#scroller {
+				position: absolute;
+				z-index: 1;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				width: 5000px;
+				height: 100%;
+				-webkit-transform: translateZ(0);
+				-moz-transform: translateZ(0);
+				-ms-transform: translateZ(0);
+				-o-transform: translateZ(0);
+				transform: translateZ(0);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-o-text-size-adjust: none;
+				text-size-adjust: none;
+			}
+			
+			#scroller ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				display: flex;
+			}
+			
+			#scroller li {
+				display: block;
+				float: left;
+				width: auto;
+				padding: 0 15px;
+				height: 96%;
+				background-color: #FFFFFF;
+				font-size: 14px;
+			}
+			
+			.active_nav {
+				color: #2773DC;
+				border-bottom: 2px solid #2b5ef1;
+			}
+			/*模块列表*/
+			
+			.module_list_container {
+				/*padding-top: 45px;*/
+			}
+			
+			.common_list_container {
+				display: flex;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				background: #FFFFFF;
+				padding: 20px 0;
+			}
+			
+			.common_list_li {
+				width: 15.8%;
+				margin-right: 8.2%;
+				text-align: center;
+			}
+			
+			.common_list_li:nth-child(4n) {
+				margin: 0;
+			}
+			
+			.common_list_li:nth-child(4n+1) {
+				margin-left: 6.1%;
+			}
+			
+			.common_list_li div {
+				width: 100%;
+				height: auto;
+				padding: 0 15%;
+				text-align: center;
+			}
+			
+			.common_list_li div img {
+				width: 100%;
+			}
+			
+			.common_list_li p {
+				text-align: center;
+				font-size: 12px;
+				color: #333333;
+			}
+			
+			.module_list_title {
+				background: #FFFFFF;
+				line-height: 40px;
+				font-weight: bold;
+				padding: 0 15px;
+				font-size: 16px;
+			}
+			
+			#wrapper1 {
+				position: absolute;
+				z-index: 1;
+				top: 46px;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				background: #ccc;
+				overflow: hidden;
+			}
+			
+			#scroller1 {
+				background: #FFFFFF;
+				position: absolute;
+				z-index: 1;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				width: 100%;
+				-webkit-transform: translateZ(0);
+				-moz-transform: translateZ(0);
+				-ms-transform: translateZ(0);
+				-o-transform: translateZ(0);
+				transform: translateZ(0);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-text-size-adjust: none;
+				-moz-text-size-adjust: none;
+				-ms-text-size-adjust: none;
+				-o-text-size-adjust: none;
+				text-size-adjust: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<div id="wrapper">
+				<!--<div class="left_opacity"></div>
+				<div class="right_opacity"></div>-->
+				<div id="scroller">
+					<ul>
+						<li>理财产品</li>
+						<li>财富管理</li>
+						<li>生活服务</li>
+						<li>金融管理</li>
+						<li>投资建议</li>
+						<li>贷款产品</li>
+						<li>资金理财</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="wrapper1" class="module_list_container">
+				<div id="scroller1">
+					<div class="module_block">
+						<div class="module_list_title">理财产品</div>
+						<ul class="common_list_container">
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+						</ul>
+					</div>
+					<div class="module_block">
+						<div class="module_list_title">财富管理</div>
+						<ul class="common_list_container">
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+						</ul>
+					</div>
+					<div class="module_block">
+						<div class="module_list_title">生活服务</div>
+						<ul class="common_list_container">
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+						</ul>
+					</div>
+					<div class="module_block">
+						<div class="module_list_title">金融管理</div>
+						<ul class="common_list_container">
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+						</ul>
+					</div>
+					<div class="module_block">
+						<div class="module_list_title">投资建议</div>
+						<ul class="common_list_container">
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+						</ul>
+					</div>
+					<div class="module_block">
+						<div class="module_list_title">贷款产品</div>
+						<ul class="common_list_container">
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+						</ul>
+					</div>
+					<div class="module_block">
+						<div class="module_list_title">资金理财</div>
+						<ul class="common_list_container">
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+							<li class="common_list_li">
+								<div><img src="img/loan@2x.png" alt="" /></div>
+								<p>理财产品</p>
+							</li>
+						</ul>
+					</div>
+					<div class="holder_div"></div>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="iscroll-probe.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var myScrollNavBar, myScrollContainer;
+			var scroll_lis = $("#scroller li");
+			var moduleBlocks = $("#scroller1 .module_block");
+			var scrollerW = 0;
+			var scrollerWidthFlag = true;//为true时顶部导航总宽度强行设置为屏幕宽度
+			//重置scroller的宽度、给导航添加触发状态、给底部占位div设置高度、重置导航按钮宽度
+			function setScrollerW() {
+				var holderH = $(window).height() - $("#wrapper").outerHeight() - $(moduleBlocks[moduleBlocks.length - 1]).outerHeight();
+				$(".holder_div").height(holderH);
+				
+				$(scroll_lis[0]).addClass("active_nav").siblings().removeClass("active_nav");
+				$.each(scroll_lis, function(i, v) {
+					scrollerW += $(v).outerWidth();
+				});
+				
+				if(scrollerW < $(window).width()){
+					$(scroll_lis).width($(window).width() / $(scroll_lis).length());
+					scrollerWidthFlag = true;
+				}else{
+					$("#scroller").width(scrollerW);
+					scrollerWidthFlag = false;
+				}
+				
+				$("#scroller").width(scrollerW);
+			}
+
+			function loaded() {
+
+				setScrollerW();
+				myScrollNavBar = new IScroll('#wrapper', {
+					scrollX: true,
+					scrollY: false,
+					scrollbars: false,
+					mouseWheel: true,
+					tap: true
+				});
+
+				myScrollContainer = new IScroll("#wrapper1", {
+					scrollX: false,
+					scrollY: true,
+					scrollbars: false,
+					mouseWheel: true,
+					tap: true,
+					probeType:2
+				})
+				
+				myScrollContainer.on("scroll",function(){
+					var _this = this;
+					changeNavBar(_this);
+				})
+			}
+			window.addEventListener("DOMContentLoaded", loaded, false);
+
+			//绑定点击事件
+			$("#scroller").on("tap", 'li', function() {
+				console.log(123);
+				var _this = $(this);
+				navBarScrollTo(_this);
+				moduleContainerScroll(_this);
+			})
+			
+			//导航点击滚动到指定位置
+			function navBarScrollTo(obj){
+				var _this = obj;
+				console.log(_this);
+				_this.attr("class", "active_nav").siblings().removeClass("active_nav");
+				var scrollX = 0;
+				if(_this.index() <= 1) {
+					scrollX = 0;
+				} else if(_this.index() > 1 && _this.index() < scroll_lis.length - 2) {
+					for(var i = 0; i < _this.index() - 1; i++) {
+						scrollX += $(scroll_lis[i]).outerWidth();
+					}
+
+				} else {
+					scrollX = scrollerW - $(window).width();
+				}
+				myScrollNavBar.scrollTo(-scrollX, 0, 300, IScroll.utils.ease.linear);
+			}
+			
+			//点击导航，主视图内容区域对应滚动
+			function moduleContainerScroll(obj){
+				var _this = obj;
+				var scrollY = 0;
+				for(var i=0; i<_this.index(); i++){
+					scrollY += $(moduleBlocks[i]).outerHeight();
+				}
+				myScrollContainer.scrollTo(0, -scrollY, 300, IScroll.utils.ease.linear);
+			}
+			
+			//主视图区域滚动，导航跟随切换
+			function changeNavBar(obj){
+				
+				var scrollY = 0;
+				for(var i=0; i<moduleBlocks.length; i++){
+					scrollY += $(moduleBlocks[i]).height();
+					if(Math.abs(obj.y) <= scrollY-80){
+						navBarScrollTo($(scroll_lis[i]));
+						break;
+					}
+				}	
+				
+			}
+			
+			
+
+			document.addEventListener('touchmove', function(e) {
+				e.preventDefault();
+			}, false);
+		</script>
+	</body>
+
+</html>
